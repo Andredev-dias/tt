@@ -1,0 +1,12 @@
+.navbar-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+    background-color:var(--bg);
+    color: var(--text);
+    padding: 10px;
+    min-height: 50px;
+    position: fixed;
+  }

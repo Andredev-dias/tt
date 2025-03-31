@@ -1,22 +1,18 @@
 import './App.css'
 import { Btn } from './components/btn'
+import { Menu } from './components/menu'
 
 function App() {
 
   return (
     <>
-    <nav className='navbar-style'>
-      <p><a href="#s1">Primeira</a></p>
-      <p><a href="#s2">Segunda</a></p>
-      <p>Terceira</p>
-      <p>Quarta</p>
-    </nav>
+    <Menu s1='opa' s2='segunda' s3='banana' s4='batata'/>
     <main>
       <section id='s1'>
-       <Btn text="me clica" func="#s2"/>
+       <Btn text="proxima sessão" func="#s2"/>
       </section>
       <section id='s2'>
-
+      <Btn text="volta pra cima" func="#s1"/>
       </section>
     </main>
     </>

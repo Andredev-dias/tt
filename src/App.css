@@ -1,0 +1,21 @@
+.navbar-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  width: 100%;
+  background-color:var(--bg);
+  color: var(--text);
+  padding: 10px;
+  min-height: 50px;
+  position: fixed;
+}
+
+#s1{
+  background-color: rgb(204, 92, 238);
+  padding-top: 100px;
+}
+
+#s2{
+  background-color: rgb(69, 156, 238);
+}

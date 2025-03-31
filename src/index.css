@@ -1,0 +1,27 @@
+:root {
+ --text: #ffffff;
+ --bg: #090909;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <Menu s1='opa' s2='segunda' s3='banana' s4='batata'/>
+    <Menu s1='Home' s2='Sessão 2' s3='CONTATO' s4='...'/>
     <main>
       <section id='s1'>
        <Btn text="proxima sessão" func="#s2"/>

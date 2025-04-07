@@ -31,7 +31,7 @@ function Contact() {
           console.log("CEP não encontrado");
           return;
         }
-        // console.log(data)
+        console.log(data)
 
         const {logradouro, localidade, uf} = data;
         const address = `${logradouro ? logradouro + ', ' : ''}${localidade}, ${uf}`;
@@ -39,6 +39,7 @@ function Contact() {
              fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
              .then(response => response.json())
              .then(locationData => {
+              console.log(locationData, "eu aqui claudinho")
                if (locationData.length > 0) {
                  const { lat, lon } = locationData[0];
                  setLat(parseFloat(lat));
@@ -75,7 +76,7 @@ function Contact() {
         />
         <Marker position={position}>
           <Popup>
-           <a target="_blank" href={`https://www.google.com.br/maps/@${lat},${lng}m/data=!3m1!1e3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D`}>Abrir no Google maps</a>
+           <a target="_blank" href={`https://www.google.com.br/maps/@${position}m/data=!3m1!1e3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D`}>Abrir no Google maps</a>
           </Popup>
         </Marker>
       </MapContainer>

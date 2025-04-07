@@ -1,0 +1,16 @@
+.s1{
+  background-color: rgb(204, 92, 238);
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  height: auto;
+  min-height: 80vh;
+}
+
+.s2{
+  background-color: rgb(69, 156, 238);
+  padding-top: 100px;
+}

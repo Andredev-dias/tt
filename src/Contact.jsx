@@ -5,6 +5,7 @@ import "leaflet-defaulticon-compatibility";
 import { useState, useEffect } from "react";
 import { Menu } from "./components/menu";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { Loading } from "./components/spinner";
 
 function Contact() {
   const [cep, setCep] = useState("80510-070");
@@ -74,7 +75,7 @@ function Contact() {
       <input type="text" placeholder="Insira o CEP" onChange={handleCep} />
 
       {loading ?
-       <p>Carregando mapa...</p> :
+       <Loading/> :
        <MapContainer
         center={position}
         zoom={13}

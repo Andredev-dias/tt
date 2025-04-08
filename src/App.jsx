@@ -4,6 +4,7 @@ import { Menu } from "./components/menu";
 import { Card } from "./components/card";
 
 import p1 from "./assets/images/p1.jpeg";
+import { cards } from './assets/mock/cards';
 
 import { useState } from "react";
 
@@ -38,12 +39,13 @@ function App() {
       <main>
         <section id="s1" className={style.s1}>
           {/* <Btn text="proxima sessão" func="#s2"/> <br /> */}
-          <Card text="primeiro card" img={p1} />
-          <Card text="segundo card" img={p1} />
-          <Card text="terceiro card" img={p1} />
-          <Card text="quarto card" img={p1} />
-          <Card text="quinto card" img={p1} />
-          <Card text="sexto card" img={p1} />
+          {cards.map((item, index) => {
+            return (
+              <div key={index}>
+                <Card text={item.text} img={item.img} alt={item.text}/>
+              </div>
+            )
+          })}
         </section>
         <section id="s2" className={style.s2}>
           <Btn text="volta pra cima" func="#s1" />

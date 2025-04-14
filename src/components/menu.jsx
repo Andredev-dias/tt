@@ -18,7 +18,7 @@ export const Menu = (props) => {
                 <a href={'/'}>{props.s1}</a>
                 <a href="#s2">{props.s2}</a>
                 <a href={'/contact'}>{props.s3}</a>
-                <a>{props.s4}</a>
+                <a href={'/calcs'}>{props.s4}</a>
                 </div>
               </div>
             </div>

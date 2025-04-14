@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <Menu s1="Home" s2="Sessão 2" s3="CONTATO" s4="..." />
+      <Menu s1="Home" s2="Sessão 2" s3="CONTATO" s4="Calculos" />
       <main>
         <section id="s1" className={style.s1}>
           {/* <Btn text="proxima sessão" func="#s2"/> <br /> */}

@@ -13,6 +13,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import App from './App.jsx'
 import Contact from './Contact.jsx'
 import Calcs from './Calcs.jsx'
+import Req from './Req.jsx'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/calcs",
     element: <Calcs />,
+  },
+  {
+    path: "/requisicao",
+    element: <Req />,
   }
 ]);
 

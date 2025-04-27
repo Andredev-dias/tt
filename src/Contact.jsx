@@ -12,6 +12,13 @@ function Contact() {
   const [lat, setLat] = useState(-25.4248289);
   const [lng, setLng] = useState(-49.3548061);
   const [loading, setLoading] = useState(false);
+  const [bairro, setBairro] = useState("");
+  const [rua, setRua] = useState("");
+  const [estado, setEstado] = useState("");
+  const [localidade, setLocalidade] = useState("");
+
+
+
 
   const position = [lat, lng];
 
@@ -41,7 +48,11 @@ function Contact() {
           return;
         }
 
-        const { logradouro, localidade, uf } = data;
+        const { logradouro, localidade, uf, bairro, estado } = data;
+        setBairro(bairro)
+        setRua(logradouro)
+        setEstado(estado)
+        setLocalidade(localidade)
         const address = `${logradouro ? logradouro + ', ' : ''}${localidade}, ${uf}`;
 
         fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
@@ -72,8 +83,8 @@ function Contact() {
       <Menu s1="opa" s3="CONTATO" s4="batata" />
       <br /><br /><br /><br />
       <h1>CONTATO</h1>
-      <input type="text" placeholder="Insira o CEP" onChange={handleCep} />
-
+      <input type="text" placeholder="Insira o CEP" onChange={handleCep} /><br></br>
+      <strong>BAIRRO:</strong>  {bairro} <br></br>  <strong>RUA:</strong>  {rua}<br></br>  <strong>ESTADO:</strong>  {estado} <br></br> <strong>CIDADE:</strong>  {localidade}
       {loading ?
        <Loading/> :
        <MapContainer
